@@ -1,0 +1,151 @@
+/*---GENERAL STYLING---*/
+
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-bg: hsl(30, 38%, 92%);
+    --color-primary: hsl(158, 36%, 37%);
+    --color-primary-variant: hsl(158, 40%, 16%);
+    --color-dark: hsl(228, 12%, 48%);
+    --color-black: hsl(212, 21%, 14%);
+    
+    --transition: all 400ms ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-dark);
+    line-height: 1.5;
+    background: var(--color-bg);
+    width: 100vw;
+    height: 100vh;
+    transition: var(--transition);  
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    color: var(--color-black);
+    line-height: 1;
+}
+
+.fragrance {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+}
+
+p {
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.attribution {
+    display: none;
+}
+
+
+/*---DESKTOP STYLING---*/
+
+body {
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    background: var(--color-white);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+}
+
+.product-details {
+    padding: 2rem 3rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+
+.product__price {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.product__price >.new-price {
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.product__price >.old-price {
+    text-decoration: line-through;
+}
+
+.btn {
+    background: var(--color-primary);
+    width: 100%;
+    height: 2.7rem;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn a {
+    color: var(--color-white);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: var(--color-primary-variant);
+    cursor: pointer;
+}
+
+
+/*---MEDIA QUERY---*/
+
+@media screen and (max-width: 600px) {
+
+    .container {
+        max-width: 80vw;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .product-details {
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+
+}
